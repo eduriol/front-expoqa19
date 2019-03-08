@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <p>
+          <a href="/#!/buyers">Go to buyers list >></a>
+        </p>
+      </div>
+      <div class="col-md-8">
+        <ul class="elements">
+          <li ng-repeat="item in $ctrl.items"
+              class="thumbnail element-list-item">
+            <p><span>Item {{item.id}}:</span> {{item.title}}</p>
+            <p><span>Store:</span> {{item.store.name}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  

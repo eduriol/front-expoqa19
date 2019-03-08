@@ -1,0 +1,25 @@
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+        <p>
+          <a href="/#!/items">Go to items list >></a>
+        </p>
+      </div>
+      <div class="col-md-8">
+        <ul class="elements">
+          <li ng-repeat="buyer in $ctrl.buyers"
+              class="thumbnail element-list-item">
+            <p><span>Buyer {{buyer.id}}:</span> {{buyer.name}}</p>
+            <p><span>Purchased items:</span></p>
+            <ul>
+              <li ng-repeat="item in buyer.purchasedItems">
+                  <span>Order {{item.orderNumber}}:</span> {{item.itemTitle}}
+              </li>
+            </ul>
+            </br>
+            <p><span>Preferred store:</span> {{buyer.preferredStore.name}}</p>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
